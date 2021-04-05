@@ -1,0 +1,62 @@
+@import "vars";
+@import "global";
+@import "libs";
+
+.accordion {
+    margin: 100px 0;
+    &-wrapper {
+        &__item {
+            border: 1px solid #000;
+            &:last-child {
+                border-top: none;
+            }
+            &-trigger {
+                font-size: 20px;
+                background-color: #eee;
+                padding: 10px;
+            }
+            &-content {
+                font-size: 16px;
+                display: none;
+                overflow: hidden;
+                padding: 10px;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+.tabs {
+    &-wrapper {
+        &__triggers {
+            display: flex;
+            &-el {
+                border: 1px solid #000;
+                font-size: 20px;
+                padding: 10px;
+                flex-grow: 1; // один к одному
+                text-align: center;
+                &:first-child{
+                    border-right: none;
+                }
+            }
+            &-active {
+                background-color: #eee;
+            }
+        }
+        &__content {
+            &-el {
+                font-size: 16px;
+                padding: 10px;
+                display: none;
+                border: 1px solid #000;
+                border-top: none;
+            }
+            &-active {
+                display: block;
+            }
+        }
+    }
+}
+
+@import "media";
